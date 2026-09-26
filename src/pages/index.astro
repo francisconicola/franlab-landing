@@ -1,0 +1,45 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="franlab">
+  <header class="title">
+    <h1>franlab, a lab for things™</h1>
+    <div class="splash" id="splash"></div>
+  </header>
+  <main>
+    <div
+      class="smile"
+      id="smile"
+      role="img"
+      aria-label="Rotating face"
+    ></div>
+  </main>
+
+  <script>
+    const faceEmojis = ["🥸", "😎", "🤠", "🫪", "😂", "🤯", "🤢", "😵‍💫", "😴"];
+
+    const splashPhrases = [
+      "Parche is watching closely",
+      "This page is self-service",
+      "100% water-powered!",
+      "You are being evaluated",
+      "Happy Thursday!",
+      "Free bitcoins tomorrow!",
+      "SOHCAHTOA...",
+      "Choose your champignon",
+    ];
+
+    function randomItem<T>(items: T[]) {
+      return items[Math.floor(Math.random() * items.length)];
+    }
+
+    const smile = document.querySelector("#smile");
+    const splash = document.querySelector("#splash");
+
+    if (smile && splash) {
+      smile.textContent = randomItem(faceEmojis);
+      splash.textContent = randomItem(splashPhrases);
+    }
+  </script>
+</BaseLayout>
