@@ -1,0 +1,170 @@
+[
+  {
+    "name": "The Resistance: Avalon",
+    "description": "Un juego de deducción social sobre lealtades secretas, misiones nobles y engaños cuidadosamente ocultos.",
+    "box": {
+      "coverUrl": "/assets/images/cover-avalon.webp",
+      "color": "#70583d",
+      "dimensionsCm": { "width": 15, "height": 20, "depth": 5 }
+    },
+    "bggUrl": "https://boardgamegeek.com/boardgame/128882/the-resistance-avalon",
+    "playerCount": { "supported": "5-10", "recommended": "7-8" },
+    "time": "30 min"
+  },
+  {
+    "name": "Halloween",
+    "description": "Una cacería de movimiento oculto en la que Michael Myers acecha a Laurie y sus amigos por Haddonfield.",
+    "box": {
+      "coverUrl": "/assets/images/cover-halloween.webp",
+      "color": "#263746",
+      "dimensionsCm": { "width": 31.5, "height": 31.5, "depth": 6 }
+    },
+    "bggUrl": "https://boardgamegeek.com/boardgame/380175/halloween",
+    "playerCount": { "supported": "2-4", "recommended": "4" },
+    "time": "60-120 min"
+  },
+  {
+    "name": "Knarr",
+    "description": "Forma una tripulación vikinga, explora nuevos destinos y aumenta tu reputación mediante el comercio.",
+    "box": {
+      "coverUrl": "/assets/images/cover-knarr.webp",
+      "color": "#177f91",
+      "dimensionsCm": { "width": 13, "height": 18, "depth": 4 }
+    },
+    "bggUrl": "https://boardgamegeek.com/boardgame/379629/knarr",
+    "playerCount": { "supported": "2-4", "recommended": "3" },
+    "time": "40 min"
+  },
+  {
+    "name": "Lovecraft Letter",
+    "description": "Un rápido juego de deducción y riesgo donde el conocimiento prohibido puede otorgarte poder o destruir tu cordura.",
+    "box": {
+      "coverUrl": "/assets/images/cover-lovecraft-letter.webp",
+      "color": "#685438",
+      "dimensionsCm": { "width": 16, "height": 22, "depth": 5 }
+    },
+    "bggUrl": "https://boardgamegeek.com/boardgame/198740/lovecraft-letter",
+    "playerCount": { "supported": "2-6" },
+    "time": "5-20 min"
+  },
+  {
+    "name": "The Search for Planet X",
+    "description": "Usa observaciones, teorías y deducción lógica para encontrar un planeta oculto en los confines del sistema solar.",
+    "box": {
+      "coverUrl": "/assets/images/cover-planet-x.webp",
+      "color": "#173f52",
+      "dimensionsCm": { "width": 30, "height": 30, "depth": 7 }
+    },
+    "bggUrl": "https://boardgamegeek.com/boardgame/279537/the-search-for-planet-x",
+    "playerCount": { "supported": "1-4", "recommended": "3" },
+    "time": "60-75 min"
+  },
+  {
+    "name": "Quoridor Pac-Man",
+    "description": "La clásica carrera por el laberinto incorpora un segundo modo con Pac-Man, fantasmas y superpíldoras.",
+    "box": {
+      "coverUrl": "/assets/images/cover-quoridor-pacman.webp",
+      "color": "#e8ca00",
+      "dimensionsCm": { "width": 28, "height": 28, "depth": 6 }
+    },
+    "bggUrl": "https://boardgamegeek.com/boardgame/411617/quoridor-pac-man",
+    "playerCount": { "supported": "2" },
+    "time": "15 min"
+  },
+  {
+    "name": "Slay the Spire: The Board Game",
+    "description": "Una aventura cooperativa de construcción de mazos con caminos ramificados, reliquias extrañas y combates cada vez más exigentes.",
+    "box": {
+      "coverUrl": "/assets/images/cover-slay-the-spire.webp",
+      "color": "#873b2d",
+      "dimensionsCm": { "width": 31, "height": 30.8, "depth": 11.6 }
+    },
+    "bggUrl": "https://boardgamegeek.com/boardgame/338960/slay-the-spire-the-board-game",
+    "playerCount": { "supported": "1-4" },
+    "time": "30-150 min"
+  },
+  {
+    "name": "The Crew: Mission Deep Sea",
+    "description": "Completen juntos misiones cada vez más inusuales en una expedición submarina cooperativa de bazas.",
+    "box": {
+      "coverUrl": "/assets/images/cover-the-crew-deep-sea.webp",
+      "color": "#075d68",
+      "dimensionsCm": { "width": 13, "height": 18, "depth": 4 }
+    },
+    "bggUrl": "https://boardgamegeek.com/boardgame/324856/the-crew-mission-deep-sea",
+    "playerCount": { "supported": "2-5", "recommended": "4" },
+    "time": "20 min"
+  },
+  {
+    "name": "The Gang",
+    "description": "Un juego de póker cooperativo donde el grupo ordena sus manos en silencio para completar una serie de atracos.",
+    "box": {
+      "coverUrl": "/assets/images/cover-the-gang.webp",
+      "color": "#a38425",
+      "dimensionsCm": { "width": 13, "height": 18, "depth": 4 }
+    },
+    "bggUrl": "https://boardgamegeek.com/boardgame/411567/the-gang",
+    "playerCount": { "supported": "3-6", "recommended": "5" },
+    "time": "20 min"
+  },
+  {
+    "name": "Coup: Reforma Urbis",
+    "description": "Blufea sobre tu influencia, desafía a tus rivales y elimina sus últimas pretensiones de poder antes de que expongan las tuyas.",
+    "box": {
+      "coverUrl": "/assets/images/cover-coup-reforma-urbis.webp",
+      "color": "#4c4234",
+      "dimensionsCm": { "width": 20, "height": 12, "depth": 3 }
+    },
+    "bggUrl": "https://boardgamegeek.com/boardgame/131357/coup",
+    "playerCount": { "supported": "3-10", "recommended": "6" },
+    "time": "20 min"
+  },
+  {
+    "name": "Escape: The Curse of the Temple",
+    "description": "Lancen dados juntos en tiempo real para explorar un templo que se derrumba, romper su maldición y escapar en diez minutos.",
+    "box": {
+      "coverUrl": "/assets/images/cover-escape-curse-of-the-temple.webp",
+      "color": "#6c5427",
+      "dimensionsCm": { "width": 29.5, "height": 29.5, "depth": 6 }
+    },
+    "bggUrl": "https://boardgamegeek.com/boardgame/113294/escape-the-curse-of-the-temple",
+    "playerCount": { "supported": "1-5", "recommended": "4" },
+    "time": "10 min"
+  },
+  {
+    "name": "High Society",
+    "description": "Puja por lujos extravagantes y prestigio social sin terminar la partida como quien menos dinero conservó.",
+    "box": {
+      "coverUrl": "/assets/images/cover-high-society.webp",
+      "color": "#315f5f",
+      "dimensionsCm": { "width": 13, "height": 16.2, "depth": 2.8 }
+    },
+    "bggUrl": "https://boardgamegeek.com/boardgame/220/high-society",
+    "playerCount": { "supported": "3-5", "recommended": "4-5" },
+    "time": "15-30 min"
+  },
+  {
+    "name": "Skull King",
+    "description": "Predice exactamente cuántas bazas ganarás mientras piratas, sirenas y el Rey Calavera trastocan todos los planes.",
+    "box": {
+      "coverUrl": "/assets/images/cover-skull-king.webp",
+      "color": "#31506e",
+      "dimensionsCm": { "width": 11, "height": 15, "depth": 4 }
+    },
+    "bggUrl": "https://boardgamegeek.com/boardgame/150145/skull-king",
+    "playerCount": { "supported": "2-8", "recommended": "4-6" },
+    "time": "30 min"
+  },
+  {
+    "name": "Star Realms",
+    "description": "Construye una flota desde un mercado compartido, combina habilidades de facción y reduce a cero la autoridad de tu oponente.",
+    "box": {
+      "coverUrl": "/assets/images/cover-star-realms.webp",
+      "color": "#283b65",
+      "dimensionsCm": { "width": 6.6, "height": 9.6, "depth": 4.8 }
+    },
+    "bggUrl": "https://boardgamegeek.com/boardgame/147020/star-realms",
+    "playerCount": { "supported": "2-4", "recommended": "2" },
+    "time": "20 min"
+  }
+]

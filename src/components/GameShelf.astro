@@ -1,0 +1,383 @@
+---
+import {
+  ChevronLeft,
+  ChevronRight,
+  Clock,
+  ExternalLink,
+  Users,
+  X,
+} from "@lucide/astro";
+import GameBox from "@/components/GameBox.astro";
+import type { BoardGame } from "@/lib/board-games";
+
+interface Props {
+  game: BoardGame;
+  index: number;
+}
+
+const { game, index } = Astro.props;
+const galleryId = `gallery-${index}`;
+const restingTilt = index % 2 === 0 ? -0.7 : 0.55;
+---
+
+<li class="game-shelf">
+  <GameBox game={game} galleryId={galleryId} restingTilt={restingTilt} />
+
+  <div class="game-details">
+    <h2>{game.name}</h2>
+    <p>{game.description}</p>
+    <div class="game-facts">
+      <span class="game-fact">
+        <Users size={18} aria-hidden="true" />
+        <span>
+          {game.playerCount.supported}
+          {
+            game.playerCount.recommended &&
+              ` (Best: ${game.playerCount.recommended})`
+          }
+        </span>
+      </span>
+      <span class="game-fact">
+        <Clock size={18} aria-hidden="true" />
+        <span>{game.time}</span>
+      </span>
+    </div>
+    <a
+      class="bgg-link"
+      href={game.bggUrl}
+      target="_blank"
+      rel="noreferrer"
+    >
+      BGG
+      <ExternalLink size={16} aria-hidden="true" />
+    </a>
+  </div>
+
+  <span class="shelf-plank" aria-hidden="true"></span>
+
+  <dialog
+    class="gallery-dialog"
+    id={galleryId}
+    aria-labelledby={`gallery-title-${index}`}
+    data-gallery-dialog
+  >
+    <h2 class="visually-hidden" id={`gallery-title-${index}`}>
+      {game.name} gallery
+    </h2>
+    <button
+      class="gallery-close"
+      type="button"
+      aria-label="Close gallery"
+      data-gallery-close
+    >
+      <X size={22} aria-hidden="true" />
+    </button>
+
+    <div class="gallery-viewer">
+      <button
+        class="gallery-arrow"
+        type="button"
+        aria-label="Previous image"
+        data-gallery-previous
+      >
+        <ChevronLeft size={28} aria-hidden="true" />
+      </button>
+      <img
+        class="gallery-image"
+        src={game.gallery[0].url}
+        alt={game.gallery[0].description}
+        width="1200"
+        height="800"
+        data-gallery-image
+      />
+      <button
+        class="gallery-arrow"
+        type="button"
+        aria-label="Next image"
+        data-gallery-next
+      >
+        <ChevronRight size={28} aria-hidden="true" />
+      </button>
+    </div>
+
+    <p class="gallery-caption" data-gallery-caption>
+      {game.gallery[0].description}
+    </p>
+
+    <div class="gallery-thumbnails" aria-label="Gallery images">
+      {
+        game.gallery.map((image, imageIndex) => (
+          <button
+            class="gallery-thumbnail"
+            type="button"
+            aria-label={`View image ${imageIndex + 1}: ${image.description}`}
+            aria-current={imageIndex === 0 ? "true" : "false"}
+            data-gallery-thumbnail
+            data-image-url={image.url}
+            data-image-description={image.description}
+          >
+            <img
+              src={image.url}
+              alt=""
+              width="120"
+              height="80"
+              loading="lazy"
+            />
+          </button>
+        ))
+      }
+    </div>
+  </dialog>
+</li>
+
+<style>
+  .game-shelf {
+    position: relative;
+    display: grid;
+    grid-template-columns: 16rem minmax(0, 1fr);
+    gap: 1.5rem;
+    align-items: center;
+    min-height: 19rem;
+    padding: 1rem 2rem 2.4rem;
+    background:
+      radial-gradient(circle at 22% 35%, rgb(255 223 174 / 9%), transparent 32%),
+      linear-gradient(90deg, #211a16, #2c211b 45%, #201814);
+    box-shadow:
+      inset 1rem 0 1.8rem rgb(0 0 0 / 38%),
+      inset -1rem 0 1.8rem rgb(0 0 0 / 34%),
+      inset 0 0.7rem 1rem rgb(0 0 0 / 28%);
+    isolation: isolate;
+  }
+
+  .game-shelf::before {
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background: repeating-linear-gradient(
+      92deg,
+      transparent 0,
+      transparent 4.5rem,
+      rgb(255 255 255 / 1.5%) 4.55rem,
+      transparent 4.65rem
+    );
+    content: "";
+  }
+
+  .game-details {
+    position: relative;
+    z-index: 1;
+    max-width: 34rem;
+    padding-right: 1rem;
+    text-shadow: 0 2px 3px rgb(0 0 0 / 70%);
+  }
+
+  .game-details h2 {
+    margin: 0 0 0.6rem;
+    font-size: clamp(1.6rem, 4vw, 2.25rem);
+    line-height: 1.1;
+  }
+
+  .game-details p {
+    max-width: 48ch;
+    margin: 0 0 1rem;
+    color: #e7dfd7;
+    line-height: 1.55;
+  }
+
+  .game-facts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem 1.25rem;
+    margin-bottom: 0.9rem;
+    color: #d6ccc2;
+    font-size: 0.9rem;
+  }
+
+  .game-fact,
+  .bgg-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+  }
+
+  .bgg-link {
+    color: #ffff55;
+    font-weight: 700;
+  }
+
+  .shelf-plank {
+    position: absolute;
+    z-index: 3;
+    right: -0.8rem;
+    bottom: 0;
+    left: -0.8rem;
+    height: 1.45rem;
+    border-top: 1px solid rgb(255 235 196 / 32%);
+    background:
+      repeating-linear-gradient(
+        3deg,
+        transparent 0,
+        transparent 1.8rem,
+        rgb(54 27 13 / 18%) 1.86rem,
+        transparent 1.95rem
+      ),
+      linear-gradient(180deg, #8b5832, #5b321d 45%, #3c2115);
+    box-shadow:
+      0 0.55rem 0.7rem rgb(0 0 0 / 48%),
+      inset 0 0.22rem 0.18rem rgb(255 226 178 / 18%);
+  }
+
+  .shelf-plank::before {
+    position: absolute;
+    right: 0;
+    bottom: 100%;
+    left: 0;
+    height: 0.5rem;
+    background: linear-gradient(180deg, #a76b3d, #764628);
+    clip-path: polygon(1.5% 0, 98.5% 0, 100% 100%, 0 100%);
+    content: "";
+  }
+
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+
+  .gallery-dialog {
+    width: min(72rem, calc(100% - 2rem));
+    max-width: none;
+    max-height: calc(100% - 2rem);
+    padding: 1rem;
+    overflow: auto;
+    border: 1px solid #475569;
+    border-radius: 0.75rem;
+    background: #071a3d;
+    color: white;
+  }
+
+  .gallery-dialog::backdrop {
+    background: rgb(0 0 0 / 80%);
+  }
+
+  .gallery-close {
+    display: grid;
+    place-items: center;
+    margin: 0 0 0.75rem auto;
+    padding: 0.45rem;
+    border: 1px solid #64748b;
+    border-radius: 50%;
+    background: #0f254d;
+    color: white;
+    cursor: pointer;
+  }
+
+  .gallery-viewer {
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .gallery-image {
+    width: 100%;
+    max-height: 65vh;
+    object-fit: contain;
+    background: #020617;
+  }
+
+  .gallery-arrow {
+    display: grid;
+    place-items: center;
+    padding: 0.5rem;
+    border: 1px solid #64748b;
+    border-radius: 50%;
+    background: #0f254d;
+    color: white;
+    cursor: pointer;
+  }
+
+  .gallery-caption {
+    margin: 0.75rem 3.5rem;
+    color: #cbd5e1;
+    text-align: center;
+  }
+
+  .gallery-thumbnails {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    overflow-x: auto;
+    padding: 0.25rem;
+  }
+
+  .gallery-thumbnail {
+    flex: 0 0 auto;
+    padding: 0;
+    overflow: hidden;
+    border: 2px solid transparent;
+    border-radius: 0.35rem;
+    background: transparent;
+    cursor: pointer;
+    opacity: 0.65;
+  }
+
+  .gallery-thumbnail[aria-current="true"] {
+    border-color: #ffff55;
+    opacity: 1;
+  }
+
+  .gallery-thumbnail img {
+    display: block;
+    width: 6rem;
+    height: 4rem;
+    object-fit: cover;
+  }
+
+  @media (max-width: 700px) {
+    .game-shelf {
+      grid-template-columns: 1fr;
+      gap: 0;
+      justify-items: center;
+      min-height: 0;
+      padding: 1.25rem 1rem 2.8rem;
+    }
+
+    .game-details {
+      width: min(100%, 28rem);
+      padding: 0 0.5rem 1rem;
+      text-align: center;
+    }
+
+    .game-details p {
+      margin-inline: auto;
+    }
+
+    .game-facts {
+      justify-content: center;
+    }
+
+    .gallery-dialog {
+      width: calc(100% - 1rem);
+      max-height: calc(100% - 1rem);
+      padding: 0.75rem;
+    }
+
+    .gallery-viewer {
+      gap: 0.35rem;
+    }
+
+    .gallery-arrow {
+      padding: 0.3rem;
+    }
+
+    .gallery-caption {
+      margin-inline: 0;
+    }
+  }
+</style>

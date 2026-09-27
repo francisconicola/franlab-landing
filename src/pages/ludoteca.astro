@@ -1,0 +1,29 @@
+---
+import Ludoteca from "@/components/Ludoteca.astro";
+import BaseLayout from "@/layouts/BaseLayout.astro";
+---
+
+<BaseLayout
+  title="Ludoteca · franlab"
+  description="Mi colección de juegos de mesa."
+>
+  <main class="ludoteca-page">
+    <Ludoteca />
+  </main>
+</BaseLayout>
+
+<style>
+  .ludoteca-page {
+    display: block;
+    width: min(64rem, calc(100% - 2rem));
+    margin: 0 auto;
+    padding: 3rem 0 5rem;
+  }
+
+  @media (max-width: 700px) {
+    .ludoteca-page {
+      width: min(100% - 1rem, 40rem);
+      padding-top: 2rem;
+    }
+  }
+</style>
