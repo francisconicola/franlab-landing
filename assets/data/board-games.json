@@ -166,5 +166,29 @@
     "bggUrl": "https://boardgamegeek.com/boardgame/147020/star-realms",
     "playerCount": { "supported": "2-4", "recommended": "2" },
     "time": "20 min"
+  },
+  {
+    "name": "La Campaña",
+    "description": "Reúne un ejército, administra tus recursos y ataca a tus rivales mientras construyes el castillo que asegurará tu victoria.",
+    "box": {
+      "coverUrl": "/assets/images/cover-la-campana.webp",
+      "color": "#3f5a53",
+      "dimensionsCm": { "width": 10, "height": 14.5, "depth": 4.5 }
+    },
+    "bggUrl": "https://boardgamegeek.com/boardgame/432831/the-campaign",
+    "playerCount": { "supported": "2-5" },
+    "time": "20-60 min"
+  },
+  {
+    "name": "Catan: El juego de cartas",
+    "description": "Gestiona materias primas, comercia y construye caminos, poblados y ciudades para hacer prosperar tu territorio de Catan.",
+    "box": {
+      "coverUrl": "/assets/images/cover-catan-card-game.webp",
+      "color": "#833b31",
+      "dimensionsCm": { "width": 10, "height": 12.5, "depth": 2.5 }
+    },
+    "bggUrl": "https://boardgamegeek.com/boardgame/91534/struggle-catan",
+    "playerCount": { "supported": "2-4", "recommended": "3-4" },
+    "time": "30 min"
   }
 ]
