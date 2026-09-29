@@ -11,27 +11,28 @@ const { game, galleryId, restingTilt = 0 } = Astro.props;
 const desktopScale = 0.4;
 const mobileScale = 0.32;
 const dimensions = game.box.dimensionsCm;
+
 const scaleDimension = (centimeters: number, scale: number) =>
   Number((centimeters * scale).toFixed(3));
 
-const boxWidth = scaleDimension(dimensions.width, desktopScale);
-const boxHeight = scaleDimension(dimensions.height, desktopScale);
-const boxDepth = scaleDimension(dimensions.depth, desktopScale);
-const depthClearance = Number(
-  Math.max(0, (boxDepth - 2) * 0.08).toFixed(3),
-);
+const scaleBox = (scale: number) => {
+  const width = scaleDimension(dimensions.width, scale);
+  const height = scaleDimension(dimensions.height, scale);
+  const depth = scaleDimension(dimensions.depth, scale);
+  const depthClearance = Number(
+    Math.max(0, (depth - 2) * 0.08).toFixed(3),
+  );
 
-const mobileBoxWidth = scaleDimension(dimensions.width, mobileScale);
-const mobileBoxHeight = scaleDimension(dimensions.height, mobileScale);
-const mobileBoxDepth = scaleDimension(dimensions.depth, mobileScale);
-const mobileDepthClearance = Number(
-  Math.max(0, (mobileBoxDepth - 2) * 0.08).toFixed(3),
-);
+  return { width, height, depth, depthClearance };
+};
+
+const desktopBox = scaleBox(desktopScale);
+const mobileBox = scaleBox(mobileScale);
 ---
 
 <div
   class="box-stage"
-  style={`--box-color: ${game.box.color}; --box-width: ${boxWidth}rem; --box-height: ${boxHeight}rem; --box-depth: ${boxDepth}rem; --depth-clearance: ${depthClearance}rem; --mobile-box-width: ${mobileBoxWidth}rem; --mobile-box-height: ${mobileBoxHeight}rem; --mobile-box-depth: ${mobileBoxDepth}rem; --mobile-depth-clearance: ${mobileDepthClearance}rem; --resting-tilt: ${restingTilt}deg;`}
+  style={`--box-color: ${game.box.color}; --box-width: ${desktopBox.width}rem; --box-height: ${desktopBox.height}rem; --box-depth: ${desktopBox.depth}rem; --depth-clearance: ${desktopBox.depthClearance}rem; --mobile-box-width: ${mobileBox.width}rem; --mobile-box-height: ${mobileBox.height}rem; --mobile-box-depth: ${mobileBox.depth}rem; --mobile-depth-clearance: ${mobileBox.depthClearance}rem; --resting-tilt: ${restingTilt}deg;`}
 >
   <button
     class="box-scene"
@@ -54,6 +55,7 @@ const mobileDepthClearance = Number(
 </div>
 
 <style>
+  /* Perspective stage and projected shadows */
   .box-stage {
     position: relative;
     align-self: end;
@@ -65,9 +67,46 @@ const mobileDepthClearance = Number(
     perspective-origin: 48% 42%;
   }
 
+  .box-stage::before,
+  .box-stage::after {
+    position: absolute;
+    left: 50%;
+    content: "";
+    pointer-events: none;
+  }
+
+  .box-stage::before {
+    z-index: 0;
+    bottom: 0.8rem;
+    width: min(calc(var(--box-width) + var(--box-depth)), 13rem);
+    height: 72%;
+    background: radial-gradient(
+      ellipse at 52% 72%,
+      rgb(0 0 0 / 48%),
+      rgb(0 0 0 / 18%) 44%,
+      transparent 72%
+    );
+    transform: translateX(-44%) skewY(-2deg);
+  }
+
+  .box-stage::after {
+    z-index: 1;
+    bottom: 0.15rem;
+    width: min(calc(var(--box-width) + var(--box-depth)), 13rem);
+    height: clamp(0.85rem, var(--box-depth), 1.8rem);
+    background: radial-gradient(
+      ellipse,
+      rgb(0 0 0 / 72%),
+      rgb(0 0 0 / 32%) 48%,
+      transparent 74%
+    );
+    transform: translateX(-50%) skewX(-12deg);
+  }
+
+  /* Interactive 3D box */
   .box-scene {
     position: relative;
-    z-index: 1;
+    z-index: 2;
     width: var(--box-width);
     height: var(--box-height);
     padding: 0;
@@ -89,6 +128,7 @@ const mobileDepthClearance = Number(
     transition: transform 260ms cubic-bezier(0.2, 0.8, 0.2, 1);
   }
 
+  /* Box faces */
   .box-face {
     position: absolute;
     top: 50%;
