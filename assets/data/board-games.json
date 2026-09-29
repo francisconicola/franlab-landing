@@ -190,5 +190,17 @@
     "bggUrl": "https://boardgamegeek.com/boardgame/91534/struggle-catan",
     "playerCount": { "supported": "2-4", "recommended": "3-4" },
     "time": "30 min"
+  },
+  {
+    "name": "One Deck Dungeon",
+    "description": "Explora una mazmorra cambiante, lanza dados para superar encuentros y desarrolla a tu heroína antes de enfrentarte al jefe final.",
+    "box": {
+      "coverUrl": "/assets/images/cover-one-deck-dungeon.webp",
+      "color": "#31565b",
+      "dimensionsCm": { "width": 13.8, "height": 10, "depth": 4.6 }
+    },
+    "bggUrl": "https://boardgamegeek.com/boardgame/179275/one-deck-dungeon",
+    "playerCount": { "supported": "1-2", "recommended": "1" },
+    "time": "30-45 min"
   }
 ]
