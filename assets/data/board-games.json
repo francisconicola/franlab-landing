@@ -1,7 +1,7 @@
 [
   {
     "name": "The Resistance: Avalon",
-    "description": "Un juego de deducción social sobre lealtades secretas, misiones nobles y engaños cuidadosamente ocultos.",
+    "description": "Deducción social donde los traidores se infiltran entre las filas del rey Arturo para sabotear sus misiones.",
     "box": {
       "coverUrl": "/assets/images/cover-avalon.webp",
       "color": "#70583d",
@@ -13,19 +13,19 @@
   },
   {
     "name": "Halloween",
-    "description": "Una cacería de movimiento oculto en la que Michael Myers acecha a Laurie y sus amigos por Haddonfield.",
+    "description": "Movimiento oculto y búsqueda de objetos en una persecución asimétrica por las calles de Haddonfield.",
     "box": {
       "coverUrl": "/assets/images/cover-halloween.webp",
       "color": "#263746",
       "dimensionsCm": { "width": 31.5, "height": 31.5, "depth": 6 }
     },
     "bggUrl": "https://boardgamegeek.com/boardgame/380175/halloween",
-    "playerCount": { "supported": "2-4", "recommended": "4" },
+    "playerCount": { "supported": "2-4", "recommended": "3-4" },
     "time": "60-120 min"
   },
   {
     "name": "Knarr",
-    "description": "Forma una tripulación vikinga, explora nuevos destinos y aumenta tu reputación mediante el comercio.",
+    "description": "Carrera por la riqueza y la reputación basada en construir una tripulación como motor de recursos.",
     "box": {
       "coverUrl": "/assets/images/cover-knarr.webp",
       "color": "#177f91",
@@ -37,7 +37,7 @@
   },
   {
     "name": "Lovecraft Letter",
-    "description": "Un rápido juego de deducción y riesgo donde el conocimiento prohibido puede otorgarte poder o destruir tu cordura.",
+    "description": "Deducción y gestión de mano con eliminación de jugadores y una locura tan poderosa como arriesgada.",
     "box": {
       "coverUrl": "/assets/images/cover-lovecraft-letter.webp",
       "color": "#685438",
@@ -45,11 +45,11 @@
     },
     "bggUrl": "https://boardgamegeek.com/boardgame/198740/lovecraft-letter",
     "playerCount": { "supported": "2-6" },
-    "time": "5-20 min"
+    "time": "5-30 min"
   },
   {
     "name": "The Search for Planet X",
-    "description": "Usa observaciones, teorías y deducción lógica para encontrar un planeta oculto en los confines del sistema solar.",
+    "description": "Deducción lógica basada en cruzar observaciones y publicar teorías para localizar un planeta oculto.",
     "box": {
       "coverUrl": "/assets/images/cover-planet-x.webp",
       "color": "#173f52",
@@ -61,7 +61,7 @@
   },
   {
     "name": "Quoridor Pac-Man",
-    "description": "La clásica carrera por el laberinto incorpora un segundo modo con Pac-Man, fantasmas y superpíldoras.",
+    "description": "Carrera táctica de movimiento y bloqueo de caminos, acompañada por una variante asimétrica de persecución.",
     "box": {
       "coverUrl": "/assets/images/cover-quoridor-pacman.webp",
       "color": "#e8ca00",
@@ -73,7 +73,7 @@
   },
   {
     "name": "Slay the Spire: The Board Game",
-    "description": "Una aventura cooperativa de construcción de mazos con caminos ramificados, reliquias extrañas y combates cada vez más exigentes.",
+    "description": "Aventura cooperativa de construcción de mazos con personajes asimétricos, sinergias compartidas y combates cada vez más exigentes.",
     "box": {
       "coverUrl": "/assets/images/cover-slay-the-spire.webp",
       "color": "#873b2d",
@@ -81,11 +81,11 @@
     },
     "bggUrl": "https://boardgamegeek.com/boardgame/338960/slay-the-spire-the-board-game",
     "playerCount": { "supported": "1-4" },
-    "time": "30-150 min"
+    "time": "60-90 min por acto"
   },
   {
     "name": "The Crew: Mission Deep Sea",
-    "description": "Completen juntos misiones cada vez más inusuales en una expedición submarina cooperativa de bazas.",
+    "description": "Bazas cooperativas y comunicación limitada en una expedición submarina de objetivos variables.",
     "box": {
       "coverUrl": "/assets/images/cover-the-crew-deep-sea.webp",
       "color": "#075d68",
@@ -93,11 +93,11 @@
     },
     "bggUrl": "https://boardgamegeek.com/boardgame/324856/the-crew-mission-deep-sea",
     "playerCount": { "supported": "2-5", "recommended": "4" },
-    "time": "20 min"
+    "time": "10-15 min por mision"
   },
   {
     "name": "The Gang",
-    "description": "Un juego de póker cooperativo donde el grupo ordena sus manos en silencio para completar una serie de atracos.",
+    "description": "Póker cooperativo con comunicación limitada mediante fichas que expresan la fuerza relativa de cada mano para ordenarlas correctamente.",
     "box": {
       "coverUrl": "/assets/images/cover-the-gang.webp",
       "color": "#a38425",
@@ -105,11 +105,11 @@
     },
     "bggUrl": "https://boardgamegeek.com/boardgame/411567/the-gang",
     "playerCount": { "supported": "3-6", "recommended": "5" },
-    "time": "20 min"
+    "time": "20-30 min"
   },
   {
     "name": "Coup: Reforma Urbis",
-    "description": "Blufea sobre tu influencia, desafía a tus rivales y elimina sus últimas pretensiones de poder antes de que expongan las tuyas.",
+    "description": "Deducción social, desafíos y eliminación de jugadores, con roles ocultos y alianzas cambiantes por el control de Urbis.",
     "box": {
       "coverUrl": "/assets/images/cover-coup-reforma-urbis.webp",
       "color": "#4c4234",
@@ -117,23 +117,23 @@
     },
     "bggUrl": "https://boardgamegeek.com/boardgame/131357/coup",
     "playerCount": { "supported": "3-10", "recommended": "6" },
-    "time": "20 min"
+    "time": "20-30 min"
   },
   {
     "name": "Escape: The Curse of the Temple",
-    "description": "Lancen dados juntos en tiempo real para explorar un templo que se derrumba, romper su maldición y escapar en diez minutos.",
+    "description": "Cooperación en tiempo real con tirada de dados, exploración modular y solo diez minutos para escapar.",
     "box": {
       "coverUrl": "/assets/images/cover-escape-curse-of-the-temple.webp",
       "color": "#6c5427",
       "dimensionsCm": { "width": 29.5, "height": 29.5, "depth": 6 }
     },
     "bggUrl": "https://boardgamegeek.com/boardgame/113294/escape-the-curse-of-the-temple",
-    "playerCount": { "supported": "1-5", "recommended": "4" },
+    "playerCount": { "supported": "1-5", "recommended": "4-5" },
     "time": "10 min"
   },
   {
     "name": "High Society",
-    "description": "Puja por lujos extravagantes y prestigio social sin terminar la partida como quien menos dinero conservó.",
+    "description": "Subastas tensas para adquirir lujos, esquivar escándalos y conservar suficiente dinero para seguir en competencia.",
     "box": {
       "coverUrl": "/assets/images/cover-high-society.webp",
       "color": "#315f5f",
@@ -141,11 +141,11 @@
     },
     "bggUrl": "https://boardgamegeek.com/boardgame/220/high-society",
     "playerCount": { "supported": "3-5", "recommended": "4-5" },
-    "time": "15-30 min"
+    "time": "10-20 min"
   },
   {
     "name": "Skull King",
-    "description": "Predice exactamente cuántas bazas ganarás mientras piratas, sirenas y el Rey Calavera trastocan todos los planes.",
+    "description": "Bazas en alta mar donde cada ronda gira alrededor de una predicción que debe cumplirse.",
     "box": {
       "coverUrl": "/assets/images/cover-skull-king.webp",
       "color": "#31506e",
@@ -153,11 +153,11 @@
     },
     "bggUrl": "https://boardgamegeek.com/boardgame/150145/skull-king",
     "playerCount": { "supported": "2-8", "recommended": "4-6" },
-    "time": "30 min"
+    "time": "30-40 min"
   },
   {
     "name": "Star Realms",
-    "description": "Construye una flota desde un mercado compartido, combina habilidades de facción y reduce a cero la autoridad de tu oponente.",
+    "description": "Construcción de mazos competitiva con mercado compartido, sinergias de facción y combate en el espacio.",
     "box": {
       "coverUrl": "/assets/images/cover-star-realms.webp",
       "color": "#283b65",
@@ -165,23 +165,23 @@
     },
     "bggUrl": "https://boardgamegeek.com/boardgame/147020/star-realms",
     "playerCount": { "supported": "2-4", "recommended": "2" },
-    "time": "20 min"
+    "time": "20-30 min"
   },
   {
     "name": "La Campaña",
-    "description": "Reúne un ejército, administra tus recursos y ataca a tus rivales mientras construyes el castillo que asegurará tu victoria.",
+    "description": "Combate de cartas y gestión de recursos para derrotar a los ejércitos rivales o completar un castillo.",
     "box": {
       "coverUrl": "/assets/images/cover-la-campana.webp",
       "color": "#3f5a53",
       "dimensionsCm": { "width": 10, "height": 14.5, "depth": 4.5 }
     },
     "bggUrl": "https://boardgamegeek.com/boardgame/432831/the-campaign",
-    "playerCount": { "supported": "2-5" },
-    "time": "20-60 min"
+    "playerCount": { "supported": "2-5", "recommended": "2" },
+    "time": "20-40 min"
   },
   {
     "name": "Catan: El juego de cartas",
-    "description": "Gestiona materias primas, comercia y construye caminos, poblados y ciudades para hacer prosperar tu territorio de Catan.",
+    "description": "Gestión e intercambio de recursos en una carrera de cartas por construir caminos, poblados y ciudades.",
     "box": {
       "coverUrl": "/assets/images/cover-catan-card-game.webp",
       "color": "#833b31",
@@ -189,11 +189,11 @@
     },
     "bggUrl": "https://boardgamegeek.com/boardgame/91534/struggle-catan",
     "playerCount": { "supported": "2-4", "recommended": "3-4" },
-    "time": "30 min"
+    "time": "20-40 min"
   },
   {
     "name": "One Deck Dungeon",
-    "description": "Explora una mazmorra cambiante, lanza dados para superar encuentros y desarrolla a tu heroína antes de enfrentarte al jefe final.",
+    "description": "Colocación y manipulación de dados en una mazmorra de cartas con progresión de personaje y desafíos crecientes.",
     "box": {
       "coverUrl": "/assets/images/cover-one-deck-dungeon.webp",
       "color": "#31565b",
@@ -201,6 +201,6 @@
     },
     "bggUrl": "https://boardgamegeek.com/boardgame/179275/one-deck-dungeon",
     "playerCount": { "supported": "1-2", "recommended": "1" },
-    "time": "30-45 min"
+    "time": "45-60 min"
   }
 ]
